@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js">
+    </script>
+    <script src=""></script>
+    <title>
+        Binance API Chat
+    </title>
+
+</head>
+
+<body>
+    <h2 id="price">Trades</h2>
+    <h3>Settings</h3>
+    <div class="settings">
+        RSI
+        <input type="checkbox" name="" id="">
+        <input type="text" placeholder="14"> Ovebrought
+        <input type="checkbox" name="" id="">
+        <input type="text" placeholder="70"> Oversell
+        <input type="checkbox" name="" id="">
+        <input type="text" placeholder="30">
+    </div>
+
+
+</body>
+<script src="{{url_for('static',filename='chart.js')}}"></script>
+
+</html>
