@@ -12,7 +12,39 @@
 
 <body>
     <h2 id="price">Trades</h2>
-    <h3>Settings</h3>
+    {{title}}
+    <h2>Balaces</h2>
+    <form action="/buy" method="post">
+        <input type="text" placeholder="eg. 0.001 BTC" id="quantity" />
+        <select id="symbol">
+            {%for ticket in symbols%}
+            <option >
+                {{ticket['symbol']}}
+            </option>
+            {%endfor%}
+        </select>
+        <input type="submit" name="buy" value="BUY" id="buy"></input>
+    </form>
+    <table>
+        <tr>
+            <td>
+                <b>Asset</b>
+            </td>
+            <td>
+                <b>Free</b>
+            </td>
+        </tr>
+        {% for balance in balances %}
+        <tr>
+            <td>
+                {{balance['asset']}}
+            </td>
+            <td>
+                {{balance['free']}}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
     <div class="settings">
         RSI
         <input type="checkbox" name="" id="">
